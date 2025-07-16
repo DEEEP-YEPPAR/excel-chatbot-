@@ -93,32 +93,6 @@ result = df[['Pregnancies', 'Glucose', 'BloodPressure']].head(50)
    - Exception for pie chart " import gc,gc.collect()" use this for pie graph
    - Exception for scatter plot and boxplot and bar graph do not use the " plt.close() ,result = plt.gcf() , just use the plt.show()   
 """
-# prompt = f"""
-# # You are a Python data expert.
-# # Available DataFrame columns: {list(df.columns)}
-
-# # Write Python code to answer this question from the DataFrame `df`:
-# # Question: "{user_query}"
-
-# # ⚠️ IMPORTANT RULES:
-# # 1. Only return Python code (no explanations or markdown)
-# # 2. Always store your final result in a variable named `result`
-# # 3. Use ONLY these imports: pandas as pd, numpy as np, matplotlib.pyplot as plt
-# # 4. Your code must work directly on the `df` variable
-# # 5. Handle missing values appropriately
-# # 6. If showing data, limit to 100 rows maximum
-# # 7. Give me the perticular raw or colummn(for example give the raw no 10/11/15 or any same goes with columns)
-# # 8. For plots:
-# #    - use the matplotlib for graph making not the seaborn
-# #    - Start with `plt.figure(figsize=(6, 3))` to create appropriately sized figures
-# #    - Store the figure in `result`
-# #    - Use `plt.close()` after creating plots to prevent display issues
-# #    -use the plt for gragh not the other python lib
-# #    - Add titles and labels for clarity
-# #    - do not use the seaborn lib
-# #    - Exception for pie chart " import gc,gc.collect()" use this for pie graph
-# #    - Exception for scatter plot and boxplot and bar graph do not use the " plt.close() ,result = plt.gcf() , just use the plt.show()   
-# # """
 
             try:
                 # Get response from Groq API
@@ -138,8 +112,8 @@ result = df[['Pregnancies', 'Glucose', 'BloodPressure']].head(50)
                 elif generated_code.startswith('```'):
                     generated_code = generated_code[3:-3].strip()
                 
-                st.subheader("🧠 Generated Code")
-                st.code(generated_code, language='python')
+                # st.subheader("🧠 Generated Code")
+                # st.code(generated_code, language='python')
 
                 # Prepare execution environment
                 env = {
