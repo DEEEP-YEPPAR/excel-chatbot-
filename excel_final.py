@@ -83,6 +83,7 @@ result = df[['Pregnancies', 'Glucose', 'BloodPressure']].head(50)
 
 9. For plots:
    - use the matplotlib for graph making not the seaborn
+   - always put time on x-axis and use do not overlap names
    - Start with `plt.figure(figsize=(6, 3))` to create appropriately sized figures
    - Store the figure in `result`
    - Use `plt.close()` after creating plots to prevent display issues
