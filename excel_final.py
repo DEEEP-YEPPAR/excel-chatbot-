@@ -17,7 +17,9 @@ matplotlib.use('Agg')
 
 # Load API keys from .env
 load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
+GROQ_API_KEY = st.secrets("GROQ_API_KEY")
+# GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # Initialize Groq client
 client = Groq(api_key=GROQ_API_KEY)
